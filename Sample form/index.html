@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Product Order Form</h2>
+    <form id="orderForm" onsubmit="return validateForm()">
+        <!-- Product Name -->
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+
+        <!-- Quantity -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+        <!-- Color Options -->
+        <label>Color:</label>
+        <input type="radio" id="red" name="color" value="Red" required>
+        <label for="red">Red</label>
+        <input type="radio" id="blue" name="color" value="Blue">
+        <label for="blue">Blue</label>
+        <input type="radio" id="green" name="color" value="Green">
+        <label for="green">Green</label><br><br>
+
+        <!-- Size Dropdown -->
+        <label for="size">Size:</label>
+        <select id="size" name="size" required>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select><br><br>
+
+        <!-- Shipping Address -->
+        <label for="address">Shipping Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
+
+        <!-- Payment Method -->
+        <label>Payment Method:</label>
+        <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card" required>
+        <label for="creditCard">Credit Card</label>
+        <input type="radio" id="paypal" name="paymentMethod" value="PayPal">
+        <label for="paypal">PayPal</label>
+        <input type="radio" id="bankTransfer" name="paymentMethod" value="Bank Transfer">
+        <label for="bankTransfer">Bank Transfer</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
